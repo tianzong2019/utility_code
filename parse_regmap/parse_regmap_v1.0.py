@@ -89,6 +89,8 @@ def parse_single_table(tabs, cter, rowCnt, wfd):
                     continue
                 if nextCell[idxc].fill.fgColor.rgb == frgb_res:
                     continue
+                if nextCell[idxc].value in range(32):
+                    continue
                 bed = cell.value
                 # bst = bed
                 flag = idxc
